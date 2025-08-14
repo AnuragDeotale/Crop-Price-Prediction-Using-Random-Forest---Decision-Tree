@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Schemes for Farmers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://images.pexels.com/photos/212324/pexels-photo-212324.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #004d40;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .scheme-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .scheme-card {
+            background: rgba(241, 248, 233, 0.95); /* Light greenish-white with slight transparency */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            border: 1px solid #c8e6c9;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .scheme-card:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            background: rgba(220, 237, 200, 0.95); /* Slightly darker greenish shade on hover */
+        }
+
+        .scheme-card h2 {
+            color: #1B5E20;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .scheme-card p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .scheme-card a {
+            display: inline-block;
+            margin-top: 12px;
+            text-decoration: none;
+            color: #ffffff;
+            background: #2E7D32;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .scheme-card a:hover {
+            background: #1B5E20;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Indian Government Schemes for Farmers</h1>
+        <div class="scheme-grid">
+            <div class="scheme-card">
+                <h2>PM-KISAN</h2>
+                <p>Pradhan Mantri Kisan Samman Nidhi (PM-KISAN) provides income support to all farmer families.</p>
+                <a href="https://pmkisan.gov.in/" target="_blank">Learn More</a>
+            </div>
+            <div class="scheme-card">
+                <h2>PMFBY</h2>
+                <p>Pradhan Mantri Fasal Bima Yojana (PMFBY) offers crop insurance against natural calamities.</p>
+                <a href="https://pmfby.gov.in/" target="_blank">Learn More</a>
+            </div>
+            <div class="scheme-card">
+                <h2>Soil Health Card Scheme</h2>
+                <p>Provides farmers with soil health reports to enhance soil fertility and productivity.</p>
+                <a href="https://www.soilhealth.dac.gov.in/" target="_blank">Learn More</a>
+            </div>
+            <div class="scheme-card">
+                <h2>Kisan Credit Card</h2>
+                <p>Offers short-term credit to farmers for crop production and other expenses.</p>
+                <a href="https://www.nabard.org/" target="_blank">Learn More</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

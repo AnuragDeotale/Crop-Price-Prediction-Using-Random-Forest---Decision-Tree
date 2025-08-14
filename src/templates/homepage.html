@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <title>AgroTech Navigator</title>
+  <script src="https://kit.fontawesome.com/630e6cad6a.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Smooth transition for background changes */
+    .carousel-bg {
+      transition: background-image 1s ease-in-out;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+  <!-- Logo Section -->
+  <header class="flex justify-between bg-white items-center max-w-9xl mx-auto px-6 py-6">
+    <h1 class="text-2xl font-bold text-gray-800">AgroTech Navigator</h1>
+    <nav class="hidden md:flex space-x-6">
+        <a href="/home" class="text-gray-700 hover:text-green-600 text-1xl">Home</a>
+        <a href="submitCropData" class="text-gray-700 hover:text-green-600 text-1xl">Data</a>
+        <a href="/crop_statistics" class="text-gray-700 hover:text-green-600 text-1xl">Statistics</a>
+        <a href="/schemes" class="text-gray-700 hover:text-green-600 text-1xl">Schemes</a>
+        <a href="/market_prices" class="text-gray-700 hover:text-green-600 text-1xl">Market Prices</a>
+    </nav>
+</header>
+
+
+  <!-- Navigation -->
+  <!-- <nav class="bg-green-600">
+    <div class="container mx-auto flex justify-between items-center text-white py-3">
+      <a href="#" class="px-4 py-2 hover:bg-green-500 rounded-md">Kisan Dhan</a>
+      <div class="flex space-x-4">
+        <a href="/home" class="hover:text-yellow-300">Home</a>
+        <a href="#" class="hover:text-yellow-300">Government Schemes</a>
+        <a href="/submitCropData" class="hover:text-yellow-300">Submit Crop Data</a>
+        <a href="/crop_statistics" class="hover:text-yellow-300">Crop Sowing Guide</a>
+        <a href="#" class="hover:text-yellow-300">Help</a>
+        <a href="#" class="hover:text-yellow-300">Contact</a>
+        <a href="/" class="hover:text-yellow-300">Log out</a>
+      </div>
+    </div>
+  </nav> -->
+
+  <!-- Hero Section with Carousel -->
+  <div id="carousel" class="relative bg-cover bg-center h-[60vh] carousel-bg" style="background-image: url('/static/images/apples-3.jpg');">
+    <!-- Navigation Buttons -->
+    <div class="absolute inset-0 bg-black bg-opacity-30 flex justify-between items-center px-4">
+      <button id="prev" class="text-white bg-green-600 hover:bg-green-700 p-2 rounded-full shadow-lg">
+        <i class="fa-solid fa-chevron-left text-2xl"></i>
+      </button>
+      <button id="next" class="text-white bg-green-600 hover:bg-green-700 p-2 rounded-full shadow-lg">
+        <i class="fa-solid fa-chevron-right text-2xl"></i>
+      </button>
+    </div>
+    <!-- Predict Button -->
+    <!-- <div class="absolute inset-0 flex justify-center items-center">
+      <a href="/predict" class="text-white bg-yellow-400 hover:bg-yellow-500 text-3xl font-bold px-6 py-3 rounded-md">
+        Predict
+      </a>
+    </div> -->
+  </div>
+
+  <!-- Features Section -->
+  <div class="flex justify-center items-center py-10"> 
+    <a href="/predict" 
+       class="text-white bg-black hover:bg-gray-800 text-3xl font-bold px-6 py-3 rounded-md">
+      Predict
+    </a>
+  </div>
+  
+  <main class="container mx-auto py-8">
+    
+    <!-- First Feature -->
+    <div class="flex flex-col md:flex-row items-center mb-16">
+      <div class="md:w-1/2 px-4">
+        <h2 class="text-2xl font-bold text-green-700">Pradhan Mantri Kisan Maandhan Yojana</h2>
+        <p class="mt-4 text-gray-700">Government has launched the Pradhan Mantri Kisan Maan DhanYojana (PM-KMY) on 12.9.2019 with a view to provide social security to Small and Marginal Farmers in their old age when they have no means of livelihood and minimal or no savings to take care of their expenses.</p>
+      </div>
+      <div class="md:w-1/2 px-4 mt-6 md:mt-0">
+        <img src="../static/images/latest/1.jpg" alt="Kisan Maandhan Yojana" class="rounded-lg shadow-md">
+      </div>
+    </div>
+
+    <!-- Additional Features... -->
+       <!-- Second Feature -->
+    <div class="flex flex-col md:flex-row-reverse items-center mb-16">
+      <div class="md:w-1/2 px-4">
+        <h2 class="text-2xl font-bold text-green-700">Pradhan Mantri Fasal Bima Yojana - Crop Insurance</h2>
+        <p class="mt-4 text-gray-700">
+          The Pradhan Mantri Fasal Bima Yojana was launched on February 18, 2016, by Prime Minister Narendra Modi.</p>
+      </div>
+      <div class="md:w-1/2 px-4 mt-6 md:mt-0">
+        <img src="../static/images/latest/2.jpg" alt="Fasal Bima Yojana" class="rounded-lg shadow-md">
+      </div>
+    </div>
+    
+
+    <!-- Third Feature -->
+    <div class="flex flex-col md:flex-row items-center mb-16">
+      <div class="md:w-1/2 px-4">
+        <h2 class="text-2xl font-bold text-green-700">PM-Kisan Samman Nidhi</h2>
+        <p class="mt-4 text-gray-700">Under this scheme, farmer owners cultivating up to 2 hectares of land are eligible to benefit from it.
+        </p>
+      </div>
+      <div class="md:w-1/2 px-4 mt-6 md:mt-0">
+        <img src="../static/images/latest/3.jpg" alt="Samman Nidhi" class="rounded-lg shadow-md">
+      </div>
+    </div>
+  </main>
+
+
+
+  <!-- Scripts -->
+  <script>
+    // Carousel Functionality
+    const carousel = document.getElementById('carousel');
+    const images = [
+      '../static/images/apples-3.jpg',
+      '../static/images/latest/6.jpg',
+      '../static/images/latest/5.jpg',
+      '../static/images/latest/3.jpg'
+    ];
+    let currentIndex = 0;
+
+    const updateBackgroundImage = () => {
+      carousel.style.backgroundImage = `url('${images[currentIndex]}')`;
+    };
+
+    document.getElementById('prev').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateBackgroundImage();
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateBackgroundImage();
+    });
+
+    // Auto-rotate the carousel every 5 seconds
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateBackgroundImage();
+    }, 5000);
+  </script>
+</body>
+</html>
